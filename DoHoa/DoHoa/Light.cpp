@@ -88,12 +88,12 @@ void display(void)
 
 	glPushMatrix();
 	glRotated((GLdouble)spin, 0.0, 1.0, 0.0);
-	glRotated(0.0, 1.0, 0.0, 0.0);
+	/*glRotated(1.0, 0.0, 1.0, 0.0);*/
 
-	GLfloat light_ambient[] = { 1.0,0.0,0.0,0.0 };
+	//GLfloat light_ambient[] = { 1.0,0.0,0.0,0.0 };
 	GLfloat light_diffuse[] = { 0.0,1.0,0.0,0.0 };
-	GLfloat light_specular[] = { 1.0,0.0,0.0,0.0 };
-	GLfloat light_shinii[] = { 1.0,1.0,1.0,1.0 }; 
+	//GLfloat light_specular[] = { 1.0,0.0,0.0,0.0 };
+	//GLfloat light_shinii[] = { 1.0,1.0,1.0,1.0 }; 
 
 	glLightfv(GL_LIGHT0, GL_POSITION, position);
 	//máu ánh sáng
@@ -191,45 +191,45 @@ void myReshape(int w, int h)
 	gluPerspective(40.0, (GLfloat)w / (GLfloat)h, 1.0, 20.0);
 	glMatrixMode(GL_MODELVIEW);
 }
-
-void tmotion(int x, int y)
-{
-	printf("Tablet motion x = %d, y = %d\n", x, y);
-}
-
-void tbutton(int b, int s, int x, int y)
-{
-	printf("b = %d, s = %d, x = %d, y = %d\n", b, s, x, y);
-}
-
-void smotion(int x, int y, int z)
-{
-	fprintf(stderr, "Spaceball motion %d %d %d\n", x, y, z);
-}
-
-void rmotion(int x, int y, int z)
-{
-	fprintf(stderr, "Spaceball rotate %d %d %d\n", x, y, z);
-}
-
-void sbutton(int button, int state)
-{
-	fprintf(stderr, "Spaceball button %d is %s\n",
-		button, state == GLUT_UP ? "up" : "down");
-}
-
-void dials(int dial, int value)
-{
-	fprintf(stderr, "Dial %d is %d\n", dial, value);
-	spin = value % 360;
-	glutPostRedisplay();
-}
-
-void buttons(int button, int state)
-{
-	fprintf(stderr, "Button %d is %s\n", button,
-		state == GLUT_UP ? "up" : "down");
-}
+//
+//void tmotion(int x, int y)
+//{
+//	printf("Tablet motion x = %d, y = %d\n", x, y);
+//}
+//
+//void tbutton(int b, int s, int x, int y)
+//{
+//	printf("b = %d, s = %d, x = %d, y = %d\n", b, s, x, y);
+//}
+//
+//void smotion(int x, int y, int z)
+//{
+//	fprintf(stderr, "Spaceball motion %d %d %d\n", x, y, z);
+//}
+//
+//void rmotion(int x, int y, int z)
+//{
+//	fprintf(stderr, "Spaceball rotate %d %d %d\n", x, y, z);
+//}
+//
+//void sbutton(int button, int state)
+//{
+//	fprintf(stderr, "Spaceball button %d is %s\n",
+//		button, state == GLUT_UP ? "up" : "down");
+//}
+//
+//void dials(int dial, int value)
+//{
+//	fprintf(stderr, "Dial %d is %d\n", dial, value);
+//	spin = value % 360;
+//	glutPostRedisplay();
+//}
+//
+//void buttons(int button, int state)
+//{
+//	fprintf(stderr, "Button %d is %s\n", button,
+//		state == GLUT_UP ? "up" : "down");
+//}
 
 
 int main(int argc, char **argv)
@@ -247,16 +247,16 @@ int main(int argc, char **argv)
 	glutDisplayFunc(display);
 
 
-	glutTabletMotionFunc(tmotion);
-	glutTabletButtonFunc(tbutton);
-	glutSpaceballMotionFunc(smotion);
-	glutSpaceballRotateFunc(rmotion);
-	glutSpaceballButtonFunc(sbutton);
-	glutDialsFunc(dials);
-	glutButtonBoxFunc(buttons);
-	glutCreateMenu(menu_select);
-	
-	glutAttachMenu(GLUT_RIGHT_BUTTON);
+	//glutTabletMotionFunc(tmotion);
+	//glutTabletButtonFunc(tbutton);
+	//glutSpaceballMotionFunc(smotion);
+	//glutSpaceballRotateFunc(rmotion);
+	//glutSpaceballButtonFunc(sbutton);
+	//glutDialsFunc(dials);
+	//glutButtonBoxFunc(buttons);
+	//glutCreateMenu(menu_select);
+	//
+	//glutAttachMenu(GLUT_RIGHT_BUTTON);
 	glutMainLoop();
 	return 0;             /* ANSI C requires main to return int. */
 }

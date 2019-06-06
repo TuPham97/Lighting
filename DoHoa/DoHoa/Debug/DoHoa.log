@@ -1,7 +1,5 @@
 ﻿  Light.cpp
-f:\opengl\dohoa\dohoa\light.cpp(125): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-f:\opengl\dohoa\dohoa\light.cpp(237): warning C4101: 'right_light_m': unreferenced local variable
-f:\opengl\dohoa\dohoa\light.cpp(237): warning C4101: 'left_light_m': unreferenced local variable
-  Material_Light.cpp
-  Generating Code...
-  DoHoa.vcxproj -> F:\OpenGL\DoHoa\Debug\DoHoa.exe
+d:\lighting\dohoa\dohoa\light.cpp(125): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+d:\lighting\dohoa\dohoa\light.cpp(237): warning C4101: 'right_light_m': unreferenced local variable
+d:\lighting\dohoa\dohoa\light.cpp(237): warning C4101: 'left_light_m': unreferenced local variable
+  DoHoa.vcxproj -> D:\Lighting\DoHoa\Debug\DoHoa.exe

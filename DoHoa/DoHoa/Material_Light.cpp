@@ -7,7 +7,7 @@
 #include <math.h>
 #include <iostream>
 
-//
+
 //enum {
 //	BRASS, RED_PLASTIC, EMERALD, SLATE
 //} MaterialType;
@@ -268,4 +268,4 @@
 //	glutMainLoop();
 //	return 0;             /* ANSI C requires main to return int. */
 //}
-
+//
