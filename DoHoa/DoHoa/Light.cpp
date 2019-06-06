@@ -87,29 +87,31 @@ void display(void)
 	glTranslatef(0.0, 0.0, -5.0);
 
 	glPushMatrix();
+	//góc quay của ánh sáng
 	glRotated((GLdouble)spin, 0.0, 1.0, 0.0);
 	/*glRotated(1.0, 0.0, 1.0, 0.0);*/
 
-	//GLfloat light_ambient[] = { 1.0,0.0,0.0,0.0 };
-	GLfloat light_diffuse[] = { 0.0,1.0,0.0,0.0 };
-	//GLfloat light_specular[] = { 1.0,0.0,0.0,0.0 };
+	GLfloat light_ambient[] = { 0.0,0.0,0.0,0.0 };
+	GLfloat light_diffuse[] = { 0.0,1.0,1.0,0.0 };
+	GLfloat light_specular[] = { 10.0,0.0,0.0,0.0 };
 	//GLfloat light_shinii[] = { 1.0,1.0,1.0,1.0 }; 
 
 	glLightfv(GL_LIGHT0, GL_POSITION, position);
 	//máu ánh sáng
 	//glLightfv(GL_LIGHT0, GL_AMBIENT, light_ambient);
-	glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diffuse); 
+	//glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diffuse); 
 	//glLightfv(GL_LIGHT0, GL_SHININESS, light_shinii);
 
-	//glMaterialfv(GL_LIGHT0, GL_POSITION, position);
-	//glMaterialfv(GL_LIGHT0, GL_AMBIENT, light_ambient);
-	//glMaterialfv(GL_LIGHT1, GL_POSITION, position);
-	//glMaterialfv(GL_LIGHT1, GL_DIFFUSE, light_diffuse);
-	//glMaterialfv(GL_LIGHT1, GL_POSITION, position);
-	//glMaterialfv(GL_LIGHT1, GL_SPECULAR, light_specular);
+	/*glMaterialfv(GL_LIGHT0, GL_POSITION, position);
+	glMaterialfv(GL_LIGHT0, GL_AMBIENT, light_ambient);
+	glMaterialfv(GL_LIGHT1, GL_POSITION, position);
+	glMaterialfv(GL_LIGHT1, GL_DIFFUSE, light_diffuse);
+	glMaterialfv(GL_LIGHT1, GL_POSITION, position);
+	glMaterialfv(GL_LIGHT1, GL_SPECULAR, light_specular);*/
 
 	glTranslated(0.0, 0.0, 1.5);
 	glDisable(GL_LIGHTING);
+	//thiết lập màu cho khói cube
 	glColor3f(0.0, 1.0, 1.0);
 
 	glutWireCube(0.1);
@@ -117,7 +119,7 @@ void display(void)
 
 	glPopMatrix();
 
-	//thiết lập màu cho khói cube
+
 	// Tạo ánh sáng môi trường
 	//GLfloat ambient[] = { 0.0, 0.8, 0.0, 1.0 };
 	//glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, ambient);
